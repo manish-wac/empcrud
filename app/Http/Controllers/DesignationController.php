@@ -70,7 +70,6 @@ class DesignationController extends Controller
     {
 
         $request->validate([
-            'designation' => 'required',
             'designation' => 'required|unique',
         ]);
 
@@ -118,7 +117,6 @@ class DesignationController extends Controller
     {
 
         $request->validate([
-            'designation' => 'required',
             'designation' => 'required|unique',
         ]);
 
