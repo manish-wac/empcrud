@@ -73,7 +73,7 @@ class DepartmentController extends Controller
     {
 
         $request->validate([
-            'department' => 'required',
+            'department' => 'required|unique',
         ]);
 
         Department::create($request->all());
@@ -126,7 +126,7 @@ class DepartmentController extends Controller
     {
 
         $request->validate([
-            'department' => 'required',
+            'department' => 'required|unique',
         ]);
 
         $department->update($request->all());
