@@ -77,7 +77,7 @@ class EmployeeController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'email' => 'unique:users,email',
+            'email' => 'required|email|unique:employees',
             'password' => 'required',
             'address' => 'required',
             'photo' => 'required',
@@ -156,7 +156,7 @@ class EmployeeController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'email' => 'unique:users,email',
+            'email' => 'required|email|unique:employees',
             'address' => 'required',
         ]);
 
