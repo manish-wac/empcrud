@@ -11,4 +11,9 @@ class Designation extends Model
     protected $fillable = [
         'designation'
     ];
+
+    public function designation() {
+        return $this->hasOne(Designation::class);
+    }
+
 }
